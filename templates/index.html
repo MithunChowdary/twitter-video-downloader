@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Video Downloader</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+
+</head>
+<body>
+    <div class="container">
+    <h2>Twitter Video Downloader</h2>
+    <h3 class="highlight">NO Ads, No PayWall</h3>
+    <p>Paste your Twitter video link below and download the video instantly!</p>
+    <form method="post">
+        <input type="text" name="url" placeholder="Paste Tweet Link Here" size="50" required>
+        <button type="submit">Download Video</button>
+    </form>
+    {% if error %}
+    <p class="error">Error: {{ error }}</p>
+    {% endif %}
+    
+</div>
+<div class="below">Fast and Completely free to use
+        <p>Created by Mithun Chowdary</p>
+    </div>
+</body>
+</html>
